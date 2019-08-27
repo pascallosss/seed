@@ -7,7 +7,7 @@ image=nodejs-image:
   tags: ['8']
   
 mount=workspace:
-  bind: /github/workspace
+  bind: ./github/workspace
   path: /app
   
 alias=ci-lint:
