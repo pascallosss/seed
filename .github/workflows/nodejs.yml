@@ -33,3 +33,6 @@ jobs:
         sudo chmod +x /usr/local/bin/rocker
         sudo mkdir -p .dobi/volumes/www /home/.cache/bower
         sudo chmod -R go+rwX . ~/.npm /home/.cache/bower
+    - name: Dobi stuff
+      run: |
+        export $(cat ./.version | xargs) && /usr/local/bin/dobi ci-lint
