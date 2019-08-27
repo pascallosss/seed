@@ -18,4 +18,4 @@ alias=ci-lint:
 job=ci-operations-npm-lint:
   use: nodejs-image
   mounts: [workspace]
-  command: sh -c "cd ./app && ls -la && npm run lint"
+  command: sh -c "ls -la && pwd && echo ${GITHUB_WORKSPACE} && npm run lint"
