@@ -35,4 +35,6 @@ jobs:
         sudo chmod -R go+rwX . ~/.npm /home/.cache/bower
     - name: Dobi stuff
       run: |
+        ls -la
+        pwd
         export $(cat ./.version | xargs) && /usr/local/bin/dobi ci-lint
