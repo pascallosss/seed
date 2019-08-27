@@ -27,7 +27,7 @@ jobs:
     - name: Publish to TreeScale Registry
       uses: elgohr/Publish-Docker-Github-Action@master
       with:
-        name: pascallosss/pascallosss
+        name: pascallosss/pascallosss:1.0
         registry: "repo.treescale.com/pascallosss/pascallosss"
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
