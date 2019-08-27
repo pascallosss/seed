@@ -6,6 +6,10 @@ image=nodejs-image:
   pull: once
   tags: ['8']
   
+mount=workspace:
+  bind: .
+  path: /app
+  
 alias=ci-lint:
   annotations:
     description: "lint app"
