@@ -24,6 +24,15 @@ jobs:
         npm test
       env:
         CI: true
+    - name: Install dobi
+      run: |
+        export
+        sudo curl -L -o /usr/local/bin/dobi "https://github.com/dnephin/dobi/releases/download/v0.11/dobi-$(uname -s)"
+        sudo chmod +x /usr/local/bin/dobi
+        sudo curl -L "https://github.com/grammarly/rocker/releases/download/1.3.0/rocker_linux_amd64.tar.gz" | sudo tar -xzC /usr/local/bin/
+        sudo chmod +x /usr/local/bin/rocker
+        sudo mkdir -p .dobi/volumes/www /home/.cache/bower
+        sudo chmod -R go+rwX . ~/.npm /home/.cache/bower
     - name: Publish to registry
       uses: pascallosss/Publish-Docker-Github-Action@master
       with:
