@@ -1,0 +1,17 @@
+meta:
+  project: actions-example
+  
+image=nodejs-image
+  image: mhart/alpine-node
+  pull: once
+  tags: ['8']
+  
+alias=ci-lint:
+  annotations:
+    description: "lint app"
+  tasks: ['ci-operations-npm-lint']
+ 
+job=ci-operations-npm-lint:
+  use: nodejs-image
+  mounts: [workspace]
+  command: npm run lint
