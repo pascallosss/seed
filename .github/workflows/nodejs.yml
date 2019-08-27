@@ -24,7 +24,7 @@ jobs:
         npm test
       env:
         CI: true
-    - name: Publish to TreeScale Registry
+    - name: Publish to registry
       uses: pascallosss/Publish-Docker-Github-Action@master
       with:
         name: pascallosss/pascallosss
