@@ -1,7 +1,7 @@
 meta:
   project: actions-example
   
-image=nodejs-image
+image=nodejs-image:
   image: mhart/alpine-node
   pull: once
   tags: ['8']
