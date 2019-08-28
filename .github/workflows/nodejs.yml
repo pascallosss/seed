@@ -27,7 +27,5 @@ jobs:
     - name: Dobi
       uses: "pascallosss/actions/dobi-install@master"
       run: |
-        echo "--- start lint ---"
         export $(cat ./.version | xargs) && /usr/local/bin/dobi ci-lint
-        echo "--- end lint ---"
         
