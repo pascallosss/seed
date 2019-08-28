@@ -24,10 +24,10 @@ jobs:
         npm test
       env:
         CI: true
-    - name: Install dobi
+    - name: Dobi
       uses: "pascallosss/actions/dobi-install@master"
-    - name: Dobi stuff
       run: |
-        ls -la
-        pwd
+        echo "--- start lint ---"
         export $(cat ./.version | xargs) && /usr/local/bin/dobi ci-lint
+        echo "--- end lint ---"
+        
