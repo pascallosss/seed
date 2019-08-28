@@ -1,0 +1,21 @@
+meta:
+  project: actions-example
+  
+image=nodejs-image:
+  image: mhart/alpine-node
+  pull: once
+  tags: ['8']
+  
+mount=workspace:
+  bind: /home/runner/work/seed/seed
+  path: /app
+  
+alias=ci-lint:
+  annotations:
+    description: "lint app"
+  tasks: ['ci-operations-npm-lint']
+ 
+job=ci-operations-npm-lint:
+  use: nodejs-image
+  mounts: [workspace]
+  command: sh -c "ls -la && cd app && ls -la && npm run lint"
