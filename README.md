@@ -1,3 +1,5 @@
+<img alt="GitHub Actions status" src="https://github.com/pascallosss/seed/workflows/Node%20CI/badge.svg">
+
 # Sails.js Seed (Sample App)
 
 A sample [Sails v1](https://sailsjs.com) application, generated with:
