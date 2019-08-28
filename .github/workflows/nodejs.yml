@@ -27,6 +27,6 @@ jobs:
     - name: Dobi
       uses: "pascallosss/actions/dobi-install@master"
       with:
-        entrypoint: export $(cat ./.version | xargs) && /usr/local/bin/dobi ci-lint
+        entrypoint: /operations/ci-script.sh 
           
         
