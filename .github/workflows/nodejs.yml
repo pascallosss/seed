@@ -25,7 +25,7 @@ jobs:
       env:
         CI: true
     - name: Install dobi
-      uses: pascallosss/actions/dobi-install@master
+      uses: "pascallosss/actions/dobi-install@master"
     - name: Dobi stuff
       run: |
         ls -la
