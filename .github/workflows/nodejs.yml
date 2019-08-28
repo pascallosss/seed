@@ -26,6 +26,7 @@ jobs:
         CI: true
     - name: Dobi
       uses: "pascallosss/actions/dobi-install@master"
-      runs: |
-        export $(cat ./.version | xargs) && /usr/local/bin/dobi ci-lint
+      with:
+        entrypoint: sh -c "export $(cat ./.version | xargs) && /usr/local/bin/dobi ci-lint"
+          
         
