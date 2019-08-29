@@ -22,7 +22,7 @@ jobs:
         npm install
         npm run build --if-present
         npm test
-        chmod +x /github/workspace/operations/ci-script.sh 
+        chmod +x /home/runner/work/seed/seed/ci-script.sh 
       env:
         CI: true
     - name: Dobi
