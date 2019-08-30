@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
-export $(cat ./.version | xargs)
+export $(cat ../.version | xargs)
 
-/usr/local/bin/dobi ci-lint
+# /usr/local/bin/dobi ci-lint
 
-chmod +x /github/workspace/operations/docker-push.sh
+chmod +x ./docker-push.sh
 
-sh /github/workspace/operations/docker-push.sh
+sh ./docker-push.sh
