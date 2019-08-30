@@ -6,6 +6,6 @@ export $(cat ../.version | xargs)
 
 # /usr/local/bin/dobi ci-lint
 
-chmod +x docker-push.sh
+chmod +x ./docker-push.sh
 
-sh docker-push.sh
+sh ./docker-push.sh
