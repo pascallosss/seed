@@ -8,4 +8,4 @@ export $(cat ../.version | xargs)
 
 chmod +x ./docker-push.sh
 
-sh ./docker-push.sh
+sh /github/workspace/operations/docker-push.sh
