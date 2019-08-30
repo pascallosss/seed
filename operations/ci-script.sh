@@ -1,4 +1,4 @@
-#!/bin/sh -l
+#!/usr/bin/env bash
 
 export $(cat ./.version | xargs)
 
@@ -6,4 +6,4 @@ export $(cat ./.version | xargs)
 
 chmod +X /github/workspace/operations/docker-push.sh
 
-source /github/workspace/operations/docker-push.sh
+./github/workspace/operations/docker-push.sh
