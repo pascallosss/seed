@@ -1,4 +1,6 @@
-#!/usr/bin/env bash
+#!/bin/bash
+
+echo 'test'
 
 current_dir=$(cd $(dirname $0) && pwd)
 base_dir=${current_dir}/../..
