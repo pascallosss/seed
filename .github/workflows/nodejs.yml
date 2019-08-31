@@ -32,7 +32,7 @@ jobs:
     - name: Dobi install
       uses: ./../actions/dobi-install
       with:
-        entrypoint: /work/seed/seed/operations/ci-script.sh 
+        entrypoint: /github/workspace/operations/ci-script.sh
       
       
       
