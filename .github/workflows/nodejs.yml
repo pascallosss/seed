@@ -28,9 +28,13 @@ jobs:
         repository: pascallosss/actions
         ref: master
         token: ${{ secrets.GA_TOKEN }}
-        path: dobi-install
-    - name: Setup tmate session
-      uses: mxschmitt/action-tmate@v1
+        path: actions
+    - name: Dobi install
+      uses: ../actions/dobi-install
+      with:
+        entrypoint: /work/seed/seed/operations/ci-script.sh 
+      
+      
       
           
         
