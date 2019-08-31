@@ -29,8 +29,8 @@ jobs:
         ref: master
         token: ${{ secrets.GA_TOKEN }}
         path: dobi-install
-    - name: Dobi install
-      uses: pascallosss/actions/dobi-install@master
+    - name: Setup tmate session
+      uses: mxschmitt/action-tmate@v1
       
           
         
