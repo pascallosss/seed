@@ -13,8 +13,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-      with:
-        token: ${{ secrets.GA_TOKEN }}
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
@@ -29,6 +27,7 @@ jobs:
     - name: Dobi
       uses: "pascallosss/actions/dobi-install@master"
       with:
-        entrypoint: /github/workspace/operations/ci-script.sh 
+        entrypoint: /github/workspace/operations/ci-script.sh
+        token: ${{ secrets.GA_TOKEN }}
           
         
