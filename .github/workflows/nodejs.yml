@@ -22,13 +22,15 @@ jobs:
         chmod +x ./operations/ci-script.sh 
       env:
         CI: true
-    - name: Dobi
+    - name: Dobi checkout
       uses: actions/checkout@v1
       with:
-        entrypoint: /github/workspace/operations/ci-script.sh
         repository: pascallosss/actions
         ref: master
         token: ${{ secrets.GA_TOKEN }}
         path: dobi-install
+    - name: Dobi install
+      uses: pascallosss/actions/dobi-install@master
+      
           
         
