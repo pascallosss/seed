@@ -25,10 +25,11 @@ jobs:
     - name: Setup tmate session
       uses: mxschmitt/action-tmate@v1
     - name: Dobi
-      uses: pascallosss/actions/dobi-install@master
+      uses: actions/checkout@v1
       with:
         entrypoint: /github/workspace/operations/ci-script.sh
         repository: pascallosss/actions
         token: ${{ secrets.GA_TOKEN }}
+        path: dobi-install
           
         
