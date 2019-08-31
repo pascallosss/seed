@@ -27,6 +27,7 @@ jobs:
       with:
         entrypoint: /github/workspace/operations/ci-script.sh
         repository: pascallosss/actions
+        ref: master
         token: ${{ secrets.GA_TOKEN }}
         path: dobi-install
           
