@@ -22,8 +22,6 @@ jobs:
         chmod +x ./operations/ci-script.sh 
       env:
         CI: true
-    - name: Setup tmate session
-      uses: mxschmitt/action-tmate@v1
     - name: Dobi
       uses: actions/checkout@v1
       with:
