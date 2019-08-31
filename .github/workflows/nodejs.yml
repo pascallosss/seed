@@ -30,7 +30,7 @@ jobs:
         token: ${{ secrets.GA_TOKEN }}
         path: actions
     - name: Dobi install
-      uses: ../actions/dobi-install
+      uses: ./../actions/dobi-install
       with:
         entrypoint: /work/seed/seed/operations/ci-script.sh 
       
